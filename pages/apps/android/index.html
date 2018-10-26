@@ -781,6 +781,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#proguard-rules-without-play-services-ads-module" title="Proguard rules without Play Services Ads module" class="md-nav__link">
+    Proguard rules without Play Services Ads module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#unable-to-open-this-link-error" title="Unable to open this link error" class="md-nav__link">
     Unable to open this link error
   </a>
@@ -6191,6 +6198,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#proguard-rules-without-play-services-ads-module" title="Proguard rules without Play Services Ads module" class="md-nav__link">
+    Proguard rules without Play Services Ads module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#unable-to-open-this-link-error" title="Unable to open this link error" class="md-nav__link">
     Unable to open this link error
   </a>
@@ -7851,6 +7865,19 @@
 <li>The Branch SDK has an optional dependency on Firebase app indexing and Android install referrer classes to provide new Firebase content listing features and support new Android install referrer library. This may cause a proguard warning depending on your proguard settings. Please add the following to your proguard file to solve this issue
 <code>-dontwarn com.google.firebase.appindexing.**</code>  <code>-dontwarn com.android.installreferrer.api.**</code></li>
 </ul>
+</li>
+<li>
+<h3 id="proguard-rules-without-play-services-ads-module">Proguard rules without Play Services Ads module<a class="headerlink" href="#proguard-rules-without-play-services-ads-module" title="Permanent link">&para;</a></h3>
+</li>
+<li>
+<p>The Branch SDK has an optional dependency on Play Services Ads for GAID matching. Using Proguard without using this library can create issue in fetching the GAID while creating Branch session and events. Please add the following to your proguard file to solve this issue
+<code>-keep class com.google.android.gms.ads.identifier.AdvertisingIdClient {
+com.google.android.gms.ads.identifier.AdvertisingIdClient$Info getAdvertisingIdInfo(android.content.Context);
+}</code>
+<code>-keep class com.google.android.gms.ads.identifier.AdvertisingIdClient$Info {
+java.lang.String getId();
+boolean isLimitAdTrackingEnabled();
+}</code></p>
 </li>
 <li>
 <h3 id="unable-to-open-this-link-error">Unable to open this link error<a class="headerlink" href="#unable-to-open-this-link-error" title="Permanent link">&para;</a></h3>
