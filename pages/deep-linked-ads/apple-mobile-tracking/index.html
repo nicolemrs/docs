@@ -805,8 +805,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dashboard/people-based-attribution/" title="New Dashboard Analytics" class="md-nav__link">
-      New Dashboard Analytics
+    <a href="../../dashboard/people-based-attribution/" title="People-Based Attribution" class="md-nav__link">
+      People-Based Attribution
     </a>
   </li>
 
@@ -1261,6 +1261,20 @@
 
 
   <li class="md-nav__item">
+    <a href="../adcounty-media-mobile-tracking/" title="AdCounty Media" class="md-nav__link">
+      AdCounty Media
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
     <a href="../adgoi-technologies-mobile-tracking/" title="Adgoi Technologies" class="md-nav__link">
       Adgoi Technologies
     </a>
@@ -1277,6 +1291,20 @@
   <li class="md-nav__item">
     <a href="../adikteev-mobile-tracking/" title="Adikteev" class="md-nav__link">
       Adikteev
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../admarketplace-mobile-tracking/" title="adMarketplace" class="md-nav__link">
+      adMarketplace
     </a>
   </li>
 
@@ -1873,6 +1901,20 @@
 
 
   <li class="md-nav__item">
+    <a href="../bcnmonetize-mobile-tracking/" title="Bcnmonetize" class="md-nav__link">
+      Bcnmonetize
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
     <a href="../bedigitech-mobile-tracking/" title="BEdigitech" class="md-nav__link">
       BEdigitech
     </a>
@@ -2365,6 +2407,20 @@
   <li class="md-nav__item">
     <a href="../everflow-technologies-mobile-tracking/" title="Everflow Technologies" class="md-nav__link">
       Everflow Technologies
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../expand-mobile-mobile-tracking/" title="Expand Mobile" class="md-nav__link">
+      Expand Mobile
     </a>
   </li>
 
@@ -3763,6 +3819,20 @@
 
 
   <li class="md-nav__item">
+    <a href="../snap-mobile-tracking/" title="Snap" class="md-nav__link">
+      Snap
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
     <a href="../sonarclick-mobile-tracking/" title="Sonarclick" class="md-nav__link">
       Sonarclick
     </a>
@@ -4057,8 +4127,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../twitter-mobile-tracking/" title="Twitter" class="md-nav__link">
-      Twitter
+    <a href="../tvsquared-mobile-tracking/" title="TVSquared" class="md-nav__link">
+      TVSquared
     </a>
   </li>
 
@@ -5829,12 +5899,12 @@
 <p>There are a few possible causes of discrepancies with Apple Search Ads. Due to the low customizability of Apple Search Ads' attribution settings, discrepancies are often higher on Apple Search Ads than other platforms, even though performance may be solid and reporting may be working as expected.</p>
 <ul>
 <li><em>Time zones.</em> Ensure your Apple Search Ads time zone (in Settings &gt; Overview &gt; Account Information ) matches your Branch Dashboard time zone (visible under Account Settings).</li>
-<li><em>Limit Ad Tracking (LAT) On.</em> Apple doesn't report installs to third parties if the user has Limit Ad Tracking enabled. However the Apple Search Ads dashboard shows all installs, regardless of limit ad tracking state. You can see the approximate quantity of Limit Ad Tracking On installs by adding that column in the Apple Search Ads Reporting API. Those installs will not appear in Branch's dashboard.</li>
-<li><em>Attribution Windows.</em> Apple attributes all installs within 30 days of an Apple Search Ads click to itself. Branch's default click to install attribution window is 7 days. You can modify Branch's click to install window. You can modify your <a href="#change-attribution-windows">Apple Search Ads attribution windows</a>. </li>
+<li><em>Limit Ad Tracking (LAT) On.</em> Apple doesn't report installs to third parties if the user has Limit Ad Tracking enabled. However the Apple Search Ads dashboard shows all installs by default, regardless of limit ad tracking state. You can see the approximate quantity of Limit Ad Tracking On and Limit Ad Tracking off installs by adding those columns in the Apple Search Ads Reporting Dashboard. Those installs will not appear in Branch's dashboard.</li>
+<li><em>Attribution Windows.</em> Apple attributes all installs within 30 days of an Apple Search Ads click to itself. Branch's default click to install attribution window is 7 days. You can modify Branch's click to install window. You can modify your <a href="#change-attribution-windows">Apple Search Ads attribution windows</a> in Branch. </li>
 <li><em>Last-click attribution.</em> Apple attributes all installs within 30 days of an Apple Search Ads click to itself. Branch will attribute to the last click within its attribution windows, which can often be a different source than Apple Search Ads.</li>
-<li><em>Reinstalls.</em> Apple counts reinstalls as conversions, but Branch calls these installs "REINSTALLS."</li>
+<li><em>Reinstalls.</em> Apple's dashboard shows reinstalls as conversions in its default view, but Branch calls these installs "REINSTALLS." In the Apple dashboard, select New Downloads or Redownloads in the column selector to align data.</li>
 <li><em>Attribution API timeouts or delays.</em> Apple's API can be slow to respond. Although customers can edit the timeout, the default Branch timeout in the code above is just over 1 second. If Apple responds after this timeout, Branch will not attribute the install to Apple.</li>
-<li><em>Opens vs. installs</em> Branch considers the first open to be the install. Apple considers the time that the user downloaded the app to be an install. This can cause discrepancies in counts and date of install.</li>
+<li><em>Opens vs. installs.</em> Branch considers the first open to be the install. Apple considers the time that the user downloaded the app to be an install. This can cause discrepancies in counts and date of install.</li>
 </ul>
 <h3 id="adding-deep-linking-to-apple-search-ads">Adding deep linking to Apple Search Ads<a class="headerlink" href="#adding-deep-linking-to-apple-search-ads" title="Permanent link">&para;</a></h3>
 <p>Since this integration doesn't utilize Branch links, options for deep linking are limited. We'll pass back the value you use for <code>campaign</code> in the Apple Ads dashboard. Since this value is controlled by you, you can put anything there, but it will reflect on the Apple ads dashboard. We will track installs regularly.</p>
