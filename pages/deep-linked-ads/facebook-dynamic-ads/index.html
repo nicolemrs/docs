@@ -4417,8 +4417,22 @@
 
 
   <li class="md-nav__item">
-    <a href="../../emails/braze/" title="Braze" class="md-nav__link">
-      Braze
+    <a href="../../emails/braze/" title="Braze (via SendGrid)" class="md-nav__link">
+      Braze (via SendGrid)
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/braze-mailjet/" title="Braze (via Mailjet)" class="md-nav__link">
+      Braze (via Mailjet)
     </a>
   </li>
 
@@ -5807,25 +5821,31 @@
 <p>Branch makes it easy for you to create and manage feeds with Facebook-compatible deep links.</p>
 <ol>
 <li>Create a Branch Deep Linked Ad Feed from the <a href="https://dashboard.branch.io/ads/partner-management" target="_blank">Partner Management page</a>'s <code>Create Ad Link</code> button under the Facebook Partner and select <code>Create Product Link</code>
-<img src="/img/pages/deep-linked-ads/reusable-images/create-link-product.png" alt="Link Creation" class="three-quarters center"></li>
+<img src="/img/pages/deep-linked-ads/reusable-images/create-link-product.png" alt="Link Creation"></li>
 <li>Enter a Deep Linked Feed Name.</li>
 <li>Enter a already set up feed source or upload a new source.</li>
 <li>Configure the feed with the Ad Partner set to <strong>Facebook</strong>, and the Ad Format set to <strong>Product</strong>.
 <img alt="Ad Link Setup" src="../../../img/pages/deep-linked-ads/facebook-dynamic-ads/feed-setup.png" /></li>
 <li>On the next section, select any keys from your feed that you'd like to include in the deep linked data contained in the generated links.
-<img alt="Create Deep Linked Feed" src="../../../img/pages/deep-linked-ads/facebook-dynamic-ads/feed-keys-setup.png" /></li>
+<img src="/img/pages/deep-linked-ads/facebook-dynamic-ads/feed-keys-setup.png"></li>
 <li>If you used a Feed Source hosted on a URL (recommended), you will see two options for accessing your feed. We recommend selecting “Schedule Refresh.” If you select this option, Branch will host a URL for your Deep Linked Feed that will update itself from your Feed Source URL at regular intervals.
-<img alt="Deep Linked Feed Scheduling" src="../../../img/pages/deep-linked-ads/facebook-dynamic-ads/hosted-dlf.png" /></li>
+<img src="/img/pages/deep-linked-ads/facebook-dynamic-ads/hosted-dlf.png"></li>
 <li>Download the feed data or copy the deep linked feed URL (for hosted feeds) to be used in your Ad Campaign.</li>
 </ol>
 <h4 id="upload-your-feed-to-facebook">Upload your feed to Facebook<a class="headerlink" href="#upload-your-feed-to-facebook" title="Permanent link">&para;</a></h4>
 <p>To set up a Facebook Product Catalogue campaign, you will need to first create your campaign and use a Branch link as the Deep Link URL for the advertisements. Facebook Dynamic Ads information is available <strong><a href="https://www.facebook.com/business/help/455326144628161" target="_blank">here</a></strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Branch accepts Feed Sources that are compatible with Facebook’s <a href="https://developers.facebook.com/docs/marketing-api/dynamic-product-ads/product-catalog#feed-format">feed format</a>. Please use <a href="https://business.facebook.com/ads/product_feed/debug">Facebook’s Product Feed Debug Tool</a> to test and debug your Product Feed format.</p>
+<p>While Branch requires you have at least a column for the field <code>link</code> in your Feed Source containing the link to the merchant's site where the item can be bought, Facebook requires several more fields. Please make sure you've included all of <a href="https://developers.facebook.com/docs/marketing-api/dynamic-product-ads/product-catalog#required-fields">these fields</a> in your product feed.</p>
+<p>The largest file size accepted by the tool is 50MB. Please contact <a href="mailto:integrations@branch.io">integrations@branch.io</a> if you need to upload a larger file.</p>
+</div>
 <ol>
 <li>Navigate to your <a href="https://www.facebook.com/ads/manager/" target="_blank">Facebook Ads Manager</a>.</li>
 <li>In the top left hand corner, click into the menu, select <strong>All tools</strong>, and select <strong>Product Catalogues</strong>.
 <img alt="Facebook Product Catalogues" src="../../../img/pages/deep-linked-ads/facebook-dynamic-ads/fb-product-catalogs.png" /></li>
 <li>From the drop down menu click "Create new catalog...", name it (remember this name, you'll need it later) and select "Products sold online".
-<img src="/img/pages/deep-linked-ads/facebook-dynamic-ads/create-new-catalog.png" alt="Facebook Create New Product Catalogue" class="half center"></li>
+<img src="/img/pages/deep-linked-ads/facebook-dynamic-ads/create-new-catalog.png" alt="Facebook Create New Product Catalogue"></li>
 <li>Now that you have a product catalog, you can add a new feed. Click "Add Product Feed."
 <img alt="Add New Feed" src="../../../img/pages/deep-linked-ads/facebook-dynamic-ads/add-new-feed.png" /></li>
 <li>If you have a <a href="../../../features/deep-linked-feeds/guide/#schedule-refresh" target="_blank">Hosted Deep Linked Feed</a> (recommended), select the option "Scheduled recurring uploads." Paste your Branch-provided URL into the <strong>Feed URL</strong> text field.

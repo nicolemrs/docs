@@ -4417,8 +4417,22 @@
 
 
   <li class="md-nav__item">
-    <a href="../../emails/braze/" title="Braze" class="md-nav__link">
-      Braze
+    <a href="../../emails/braze/" title="Braze (via SendGrid)" class="md-nav__link">
+      Braze (via SendGrid)
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/braze-mailjet/" title="Braze (via Mailjet)" class="md-nav__link">
+      Braze (via Mailjet)
     </a>
   </li>
 
@@ -5920,9 +5934,15 @@
 </ul>
 <h3 id="feed-source-wont-upload">Feed Source won't upload<a class="headerlink" href="#feed-source-wont-upload" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Branch accepts Feed Sources that are compatible with Facebook’s <a href="https://developers.facebook.com/docs/marketing-api/dynamic-product-ads/product-catalog">feed format</a>. Please use <a href="https://business.facebook.com/ads/product_feed/debug">Facebook’s Product Feed Debug Tool</a> to test and debug your Product Feed format.</li>
-<li>Please ensure you have a column titled <code>link</code> in your Feed Source</li>
-<li>The largest file size accepted by the tool is 50MB. Please contact <a href="mailto:integrations@branch.io">integrations@branch.io</a> if you need to upload a larger file.</li>
+<li>
+<p>Branch accepts Feed Sources that are compatible with Facebook’s <a href="https://developers.facebook.com/docs/marketing-api/dynamic-product-ads/product-catalog#feed-format">feed format</a>. Please use <a href="https://business.facebook.com/ads/product_feed/debug">Facebook’s Product Feed Debug Tool</a> to test and debug your Product Feed format.</p>
+</li>
+<li>
+<p>While Branch requires you have at least a column for the field <code>link</code> in your Feed Source containing the link to the merchant's site where the item can be bought, Facebook requires several more fields. Please make sure you've included all of <a href="https://developers.facebook.com/docs/marketing-api/dynamic-product-ads/product-catalog#required-fields">these fields</a> in your product feed.</p>
+</li>
+<li>
+<p>The largest file size accepted by the tool is 50MB. Please contact <a href="mailto:integrations@branch.io">integrations@branch.io</a> if you need to upload a larger file.</p>
+</li>
 </ul>
 <h3 id="report-issues">Report issues<a class="headerlink" href="#report-issues" title="Permanent link">&para;</a></h3>
 <ul>
