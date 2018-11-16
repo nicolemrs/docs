@@ -6716,13 +6716,19 @@
 <li>
 <h3 id="utm-behavior">UTM Behavior<a class="headerlink" href="#utm-behavior" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Branch links will automatically map Branch analytics labels ~campaign, ~channel, and ~feature to Google Analytic's campaign parameters utm_campaign, utm_source, and utm_medium, respectively, when:<ul>
-<li>You have defined a $fallback_url, $ios_url, $android_url, $desktop_url, $original_url, and $canonical_url. </li>
-<li>Those UTM parameters are not already detected on those URLs.</li>
-<li>You have already defined the applicable Branch analytics labels; without these Branch cannot automatically map and pass the UTM parameters. </li>
+<li>
+<p>When redirecting to a web URL, Branch automatically passes through any values from the following Branch link analytics tags as UTM parameters:</p>
+<ul>
+<li>~campaign -&gt; utm_campaign</li>
+<li>~channel -&gt; utm_source</li>
+<li>~feature -&gt; utm_medium</li>
 </ul>
 </li>
-<li>For more information about UTM paramters, please read Google Analytic's <a href="https://support.google.com/analytics/answer/1033863">Custom Campaigns</a> article.</li>
+<li>
+<p>This applies to web URLs defined using any of the following $fallback_url, $ios_url, $android_url, $desktop_url, $original_url, and $canonical_url.</p>
+</li>
+<li>If these UTM parameters are already detected on the URLs being redirected to, Branch will not overwrite them.</li>
+<li>For more information about UTM parameters, please read Google Analytic's <a href="https://support.google.com/analytics/answer/1033863">Custom Campaigns</a> article.</li>
 </ul>
 </li>
 </ul>
