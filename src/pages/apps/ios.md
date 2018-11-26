@@ -626,7 +626,7 @@
 
     - Allows Branch to track Apple Search Ads deep linking analytics
 
-    - Analytics from Apple's API have been slow which will make our analytics lower. Additionally, Apple's API does not send us all the data of an ad every time which will make ads tracked by us to show a generic campaign sometimes.
+    - Analytics from Apple's API have been slow which will make our analytics slower. Additionally, Apple's API does not send us all the data of an ad every time which will make ads tracked by us to show a generic campaign sometimes.
 
     - Add before `initSession` [Initialize Branch](#initialize-branch)
 
